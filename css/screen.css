@@ -45,6 +45,7 @@ Relatief pat
     ---
     Default markup for page level elements
 */
+/* universal selector = '*' */
 html {
     font-size: 16px;
     line-height: 1.5;
@@ -52,6 +53,8 @@ html {
     font-family: "Droid Serif", Georgia, serif;
     color: #5C6366;
     padding: 48px 24px 24px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -99,9 +102,15 @@ h1 {
     margin: 0 0 24px;
 }
 
+*+h2 {
+    margin-top: 48px;
+    /*24 px van h2 + 24px van tekst die erboven staat --> Anders gaat het elkaar overlappen --> Maar 24px*/
+}
+
 h2 {
     font-size: 23px;
     line-height: 32px;
+    /*3 getallen: top 2 zijkanten bottom */
     margin: 0 0 24px;
 }
 
